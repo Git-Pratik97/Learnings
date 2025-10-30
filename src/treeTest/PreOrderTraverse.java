@@ -62,17 +62,27 @@ public class PreOrderTraverse {
     }
 
     public static void main(String[] args) {
-        int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
-        BinaryTree tree = new BinaryTree();
-        Node root = tree.buildTreePreOrder(nodes);
+//        int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
 
-        System.out.println("Root of the tree : " + root.data);
+        int[] nodes1 = {1,2,3,-1,-1,4,5};
+//        BinaryTree tree = new BinaryTree();
+//        Node root = tree.buildTreePreOrder(nodes);
+//
+        BinaryTree tree1 = new BinaryTree();
+        Node root1 = tree1.buildTreePreOrder(nodes1);
 
-        preOrderTravel(root);
-        System.out.println(" ");
+//        System.out.println("Root of the tree : " + root.data);
+//
+//        preOrderTravel(root);
+//        System.out.println(" ");
+//
+//        inOrderTravel(root);
+//        System.out.println(" ");
+//        postOrderTravel(root);
 
-        inOrderTravel(root);
-        System.out.println(" ");
-        postOrderTravel(root);
+        inOrderTravel(root1);
+        System.out.println();
+
+
     }
 }

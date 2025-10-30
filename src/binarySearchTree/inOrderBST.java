@@ -15,7 +15,13 @@ public class inOrderBST {
         List<Integer> list = new ArrayList<>();
         inOrderBST(root, list);
 
-        System.out.println(list);
+        List<Integer> returnedList = inOrderList(root, new ArrayList<>());
+
+        System.out.println("Using void method" + list);
+
+        System.out.println();
+
+        System.out.println("Using returned List" + returnedList);
     }
 
     public static class Node{
@@ -54,6 +60,22 @@ public class inOrderBST {
         nums.add(root.val);
         inOrderBST(root.left, nums);
         inOrderBST(root.right, nums);
+
+//        inOrderBST(root.left, nums);
+//        nums.add(root.val);
+//        inOrderBST(root.right, nums);
+    }
+
+    public static List<Integer> inOrderList(Node root, List<Integer> nums){
+        if(root == null){
+            return nums;
+        }
+
+        nums.add(root.val);
+        inOrderBST(root.left, nums);
+        inOrderBST(root.right, nums);
+
+        return nums;
 
 //        inOrderBST(root.left, nums);
 //        nums.add(root.val);
