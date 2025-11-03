@@ -12,7 +12,7 @@ public class ProductOfFirstTwoElements {
 //                .toList()
 //                .stream()
                 .limit(2)
-                .reduce(0, Integer::sum);
+                .reduce(1, (a, b) -> a*b);
 
         System.out.println(ans);
     }

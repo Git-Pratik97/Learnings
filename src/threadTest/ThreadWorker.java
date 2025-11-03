@@ -26,13 +26,15 @@ class JoinExample{
         ThreadWorker thread1 = new ThreadWorker("Thread_1");
         ThreadWorker thread2 = new ThreadWorker("Thread_2");
         System.out.println("Thread_1 Id = " + thread1.getId());
+
         thread1.start();
         thread1.join();
+//        thread2.join();
         thread2.start();
 
-//        thread2.join();
-//        System.out.println("Thread_1 has finished Now Waiting for Thread_2");
-//
+
+        System.out.println("Thread_1 has finished Now Waiting for Thread_2");
+        thread2.join();
 //        System.out.println("Thread_2 has finished Now Waiting for Thread_2");
         System.out.println("Both Threads have finished, Main thread to proceed");
     }

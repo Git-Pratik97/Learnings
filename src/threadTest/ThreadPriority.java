@@ -16,6 +16,7 @@ class MyThread{
         ThreadPriority thread1 = new ThreadPriority();
         ThreadPriority thread2 = new ThreadPriority();
 
+        thread2.setPriority(Thread.MAX_PRIORITY);
         thread1.start();
         thread2.start();
 

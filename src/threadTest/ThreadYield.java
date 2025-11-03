@@ -1,10 +1,15 @@
 package threadTest;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class ThreadYield {
-    public static void main(String[] args) {
+    private static AtomicInteger count = new AtomicInteger();
+
+    public static void main(String[] args) throws InterruptedException {
         Runnable printer = () -> {
             for(int i = 0; i < 3; i++){
                 System.out.println("Thread with name " + Thread.currentThread().getName() + " is running. " + i );
+                count.getAndIncrement();
                 Thread.yield();
             }
         };
@@ -14,6 +19,11 @@ public class ThreadYield {
 
         t1.start();
         t2.start();
+
+        t1.join();
+        t2.join();
+
+        System.out.println("Finally Atomic Counter is - " + count.get());
 
 
     }

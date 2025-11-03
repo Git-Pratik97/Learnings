@@ -14,7 +14,7 @@ class ThreadTestRun{
     public static void main(String[] args) {
         RunnableThread t1 = new RunnableThread();
         RunnableThread t2 = new RunnableThread();
-
+//        t1.start();
         t1.run();
         t2.run();
         System.out.println("Hello now running thread " + Thread.currentThread().getName());
