@@ -10,7 +10,7 @@ public class HashingAndEquals {
         employees.add(new Employee("Pratik", "pratik@gmail.com"));
         employees.add(new Employee("Pratik", "pratik@gmail.com"));
 
-
+//        System.out.println(employees.hashCode());
         System.out.println(employees.size());
     }
 }
