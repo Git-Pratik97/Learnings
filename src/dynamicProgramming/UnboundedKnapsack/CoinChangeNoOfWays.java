@@ -19,6 +19,7 @@ public class CoinChangeNoOfWays {
             for(int j = 0; j <= sum; j++){
                 if(arr[i-1] <= j){
                     matrix[i][j] += matrix[i][j - arr[i-1]] + matrix[i-1][j];
+                    System.out.print(i + " - " + j + " - ");
                 }
                 else{
                     matrix[i][j] = matrix[i-1][j];

@@ -2,8 +2,8 @@ package dynamicProgramming.UnboundedKnapsack;
 
 public class CoinChangeMinNumberOfCoins {
     public static void main(String[] args) {
-        int[] coins = {1};
-        int sum = 0;
+        int[] coins = {1, 4, 6};
+        int sum = 9;
 
         int minCoins = miniMumCoins(coins, coins.length, sum);
 

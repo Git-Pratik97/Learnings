@@ -1,8 +1,6 @@
 package collectionFramework;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
+import java.util.*;
 
 public class LearnIterator {
     public static void main(String[] args) {
@@ -26,6 +24,11 @@ public class LearnIterator {
         while(iterator.hasNext()){
             String element = iterator.next();
             System.out.println(element);
+        }
+
+        Map<String, Integer> map = new HashMap<>();
+        for(Map.Entry<String, Integer> entry : map.entrySet()){
+
         }
 
         }
