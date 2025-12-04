@@ -2,6 +2,11 @@ package treeTest;
 
 import com.sun.source.tree.Tree;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class CountNodes {
     static class Node{
         int data;
@@ -112,6 +117,12 @@ public class CountNodes {
         int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
         BinaryTree tree = new BinaryTree();
         Node root = tree.buildTree(nodes);
+
+        List<Integer> list1 = Arrays.stream(nodes)
+                        .boxed()
+                                .toList();
+
+        System.out.println(Collections.frequency(list1, -1));
 
         System.out.println("Root of the tree : " + root.data);
 

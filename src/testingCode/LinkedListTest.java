@@ -85,6 +85,19 @@ public class LinkedListTest {
         return newNode;
     }
 
+    public static Node reverseLinkedListRecursive(Node head){
+        if(head == null && head.next == null){
+            return head;
+        }
+
+        Node newNode = reverseLinkedListRecursive(head.next);
+
+        head.next.next = head;
+        head.next = null;
+
+        return newNode;
+    }
+
     public static void main(String[] args) {
         LinkedListTest list = new LinkedListTest();
 
