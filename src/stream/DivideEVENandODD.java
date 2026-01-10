@@ -12,7 +12,7 @@ public class DivideEVENandODD {
 
         List<Integer> list = Arrays.stream(arr).boxed().collect(Collectors.toList());
 
-        Map<Boolean, List<Integer>> map  = list.stream().collect(Collectors.groupingBy(x->x%2==0, Collectors.toList()));
+        Map<String, List<Integer>> map  = list.stream().collect(Collectors.groupingBy(x->(x%2!=0) ? "ODD" : "EVEN", Collectors.toList()));
 
         System.out.println(map);
 

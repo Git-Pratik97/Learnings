@@ -18,6 +18,7 @@ public class BuildBinaryTreePreOrder {
         static int index = -1;
         public Node buildTree(int[] nodes){
             index++;
+            if(index >= nodes.length) return null;
             if(nodes[index] == -1){
                 return null;
             }
@@ -33,13 +34,14 @@ public class BuildBinaryTreePreOrder {
     public static void main(String[] args) {
          int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
 
-         int[] preorder = {3, 9, 20, 15, 7};
-//         BinaryTree tree = new BinaryTree();
-//         Node root = tree.buildTree(nodes);
+         int[] preorder = {3, 9, -1, -1, 20, 15, -1, -1, 7, -1, -1};
+         BinaryTree tree = new BinaryTree();
+         Node root = tree.buildTree(nodes);
 
          BinaryTree tree2 = new BinaryTree();
          Node root2 = tree2.buildTree(preorder);
 
+        System.out.println("Root of the tree : " + root.data);
         System.out.println("Root of the tree : " + root2.data);
     }
 }
